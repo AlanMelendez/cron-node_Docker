@@ -5,11 +5,16 @@ WORKDIR /app
 
 # Install app dependencies
 
-#Copy package.json and app.js into app directory 
-COPY  app.js package.json ./  
+#Copy package.json 
+COPY package.json ./  
 
 # Install app dependencies
 RUN npm install 
+
+# Copy app.js
+COPY app.js ./
+
+
 
 #Execute commando to start application
 CMD [ "node", "app.js" ]
