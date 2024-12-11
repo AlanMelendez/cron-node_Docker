@@ -15,7 +15,6 @@ RUN npm install
 COPY app.js ./
 
 
-
 #Execute commando to start application
 CMD [ "node", "app.js" ]
 
